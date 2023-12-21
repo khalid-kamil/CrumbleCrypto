@@ -39,7 +39,7 @@ struct HomeView: View {
     }
 }
 
-#Preview {
+#Preview("Home") {
     NavigationView {
         HomeView()
             .navigationBarHidden(true)

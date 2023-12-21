@@ -21,6 +21,7 @@
 		E9FDFFD82B3451850043B5BF /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDFFD72B3451850043B5BF /* Double+Extension.swift */; };
 		E9FDFFDA2B345ED50043B5BF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDFFD92B345ED50043B5BF /* HomeViewModel.swift */; };
 		E9FDFFDD2B34660B0043B5BF /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDFFDC2B34660B0043B5BF /* CoinDataService.swift */; };
+		E9FDFFE02B346D0F0043B5BF /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDFFDF2B346D0F0043B5BF /* NetworkingManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		E9FDFFD72B3451850043B5BF /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		E9FDFFD92B345ED50043B5BF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E9FDFFDC2B34660B0043B5BF /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
+		E9FDFFDF2B346D0F0043B5BF /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,11 +74,12 @@
 			isa = PBXGroup;
 			children = (
 				E9FDFFB32B3360F50043B5BF /* CrumbleCryptoApp.swift */,
-				E9FDFFB52B3360F50043B5BF /* ContentView.swift */,
-				E9FDFFDB2B3465F20043B5BF /* Services */,
 				E9FDFFC42B3367C60043B5BF /* Core */,
 				E9FDFFC12B3366590043B5BF /* Extensions */,
 				E9FDFFD02B33B0C10043B5BF /* Models */,
+				E9FDFFDE2B346CDE0043B5BF /* Utilities */,
+				E9FDFFDB2B3465F20043B5BF /* Services */,
+				E9FDFFB52B3360F50043B5BF /* ContentView.swift */,
 				E9FDFFB72B3360F70043B5BF /* Assets.xcassets */,
 				E9FDFFB92B3360F70043B5BF /* Preview Content */,
 			);
@@ -169,6 +172,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		E9FDFFDE2B346CDE0043B5BF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E9FDFFDF2B346D0F0043B5BF /* NetworkingManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,6 +258,7 @@
 				E9FDFFC92B3368020043B5BF /* HomeView.swift in Sources */,
 				E9FDFFC32B3366670043B5BF /* Color+Extension.swift in Sources */,
 				E9FDFFCD2B33690E0043B5BF /* CircleButtonView.swift in Sources */,
+				E9FDFFE02B346D0F0043B5BF /* NetworkingManager.swift in Sources */,
 				E9FDFFB42B3360F50043B5BF /* CrumbleCryptoApp.swift in Sources */,
 				E9FDFFCF2B336DE50043B5BF /* CircleButtonAnimationView.swift in Sources */,
 				E9FDFFD82B3451850043B5BF /* Double+Extension.swift in Sources */,
