@@ -22,6 +22,9 @@
 		E9FDFFDA2B345ED50043B5BF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDFFD92B345ED50043B5BF /* HomeViewModel.swift */; };
 		E9FDFFDD2B34660B0043B5BF /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDFFDC2B34660B0043B5BF /* CoinDataService.swift */; };
 		E9FDFFE02B346D0F0043B5BF /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDFFDF2B346D0F0043B5BF /* NetworkingManager.swift */; };
+		E9FDFFE22B347BAE0043B5BF /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDFFE12B347BAE0043B5BF /* CoinImageView.swift */; };
+		E9FDFFE52B347D340043B5BF /* CoinImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDFFE42B347D340043B5BF /* CoinImageService.swift */; };
+		E9FDFFE72B347F030043B5BF /* CoinImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDFFE62B347F030043B5BF /* CoinImageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,11 @@
 		E9FDFFD92B345ED50043B5BF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E9FDFFDC2B34660B0043B5BF /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
 		E9FDFFDF2B346D0F0043B5BF /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		E9FDFFE12B347BAE0043B5BF /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
+		E9FDFFE42B347D340043B5BF /* CoinImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageService.swift; sourceTree = "<group>"; };
+		E9FDFFE62B347F030043B5BF /* CoinImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageViewModel.swift; sourceTree = "<group>"; };
+		E9FDFFEC2B34B44B0043B5BF /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		E9FDFFED2B34B94A0043B5BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				E9FDFFB22B3360F50043B5BF /* CrumbleCrypto */,
+				E9FDFFEC2B34B44B0043B5BF /* Config.xcconfig */,
 				E9FDFFB12B3360F50043B5BF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,6 +82,7 @@
 		E9FDFFB22B3360F50043B5BF /* CrumbleCrypto */ = {
 			isa = PBXGroup;
 			children = (
+				E9FDFFED2B34B94A0043B5BF /* Info.plist */,
 				E9FDFFB32B3360F50043B5BF /* CrumbleCryptoApp.swift */,
 				E9FDFFC42B3367C60043B5BF /* Core */,
 				E9FDFFC12B3366590043B5BF /* Extensions */,
@@ -143,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				E9FDFFCB2B3368FD0043B5BF /* CircleButton */,
+				E9FDFFE32B347BB30043B5BF /* CoinImage */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -168,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				E9FDFFDC2B34660B0043B5BF /* CoinDataService.swift */,
+				E9FDFFE42B347D340043B5BF /* CoinImageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -178,6 +190,15 @@
 				E9FDFFDF2B346D0F0043B5BF /* NetworkingManager.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E9FDFFE32B347BB30043B5BF /* CoinImage */ = {
+			isa = PBXGroup;
+			children = (
+				E9FDFFE12B347BAE0043B5BF /* CoinImageView.swift */,
+				E9FDFFE62B347F030043B5BF /* CoinImageViewModel.swift */,
+			);
+			path = CoinImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,13 +276,16 @@
 				E9FDFFDA2B345ED50043B5BF /* HomeViewModel.swift in Sources */,
 				E9FDFFB62B3360F50043B5BF /* ContentView.swift in Sources */,
 				E9FDFFD62B344E8C0043B5BF /* PreviewContent.swift in Sources */,
+				E9FDFFE22B347BAE0043B5BF /* CoinImageView.swift in Sources */,
 				E9FDFFC92B3368020043B5BF /* HomeView.swift in Sources */,
 				E9FDFFC32B3366670043B5BF /* Color+Extension.swift in Sources */,
 				E9FDFFCD2B33690E0043B5BF /* CircleButtonView.swift in Sources */,
 				E9FDFFE02B346D0F0043B5BF /* NetworkingManager.swift in Sources */,
 				E9FDFFB42B3360F50043B5BF /* CrumbleCryptoApp.swift in Sources */,
+				E9FDFFE72B347F030043B5BF /* CoinImageViewModel.swift in Sources */,
 				E9FDFFCF2B336DE50043B5BF /* CircleButtonAnimationView.swift in Sources */,
 				E9FDFFD82B3451850043B5BF /* Double+Extension.swift in Sources */,
+				E9FDFFE52B347D340043B5BF /* CoinImageService.swift in Sources */,
 				E9FDFFD22B33B0E60043B5BF /* Coin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +295,7 @@
 /* Begin XCBuildConfiguration section */
 		E9FDFFBC2B3360F70043B5BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9FDFFEC2B34B44B0043B5BF /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -334,6 +359,7 @@
 		};
 		E9FDFFBD2B3360F70043B5BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9FDFFEC2B34B44B0043B5BF /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -390,6 +416,7 @@
 		};
 		E9FDFFBF2B3360F70043B5BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9FDFFEC2B34B44B0043B5BF /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -399,6 +426,7 @@
 				DEVELOPMENT_TEAM = 34N92Q2RGP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CrumbleCrypto/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -429,6 +457,7 @@
 				DEVELOPMENT_TEAM = 34N92Q2RGP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CrumbleCrypto/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
