@@ -12,6 +12,8 @@ public class PreviewContent {
     static let sample = PreviewContent()
     private init() { }
 
+    let homeVM = HomeViewModel()
+
     let coin = Coin(id: "bitcoin", symbol: "btc", name: "Bitcoin", image: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1696501400", currentPrice: 43607, marketCap: 853938345676, marketCapRank: 1, fullyDilutedValuation: 916057140020, totalVolume: 24998874061, high24H: 44201, low24H: 42246, priceChange24H: 1274.52, priceChangePercentage24H: 3.01071, marketCapChange24H: 27016052361, marketCapChangePercentage24H: 3.26706, circulatingSupply: 19575968, totalSupply: 21000000, maxSupply: 21000000, ath: 69045, athChangePercentage: -36.99592, athDate: "2021-11-10T14:24:11.849Z", atl: 67.81, atlChangePercentage: 64052.28595, atlDate: "2013-07-06T00:00:00.000Z", lastUpdated: "2023-12-20T23:35:58.045Z", sparklineIn7D: SparklineIn7D(price: [
         42091.78246722764,
         42074.91076481174,

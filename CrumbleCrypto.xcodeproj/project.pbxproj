@@ -19,6 +19,7 @@
 		E9FDFFD42B33B6F90043B5BF /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDFFD32B33B6F90043B5BF /* CoinRowView.swift */; };
 		E9FDFFD62B344E8C0043B5BF /* PreviewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDFFD52B344E8C0043B5BF /* PreviewContent.swift */; };
 		E9FDFFD82B3451850043B5BF /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDFFD72B3451850043B5BF /* Double+Extension.swift */; };
+		E9FDFFDA2B345ED50043B5BF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDFFD92B345ED50043B5BF /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		E9FDFFD32B33B6F90043B5BF /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		E9FDFFD52B344E8C0043B5BF /* PreviewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContent.swift; sourceTree = "<group>"; };
 		E9FDFFD72B3451850043B5BF /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		E9FDFFD92B345ED50043B5BF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		E9FDFFC72B3367DD0043B5BF /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E9FDFFD92B345ED50043B5BF /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9FDFFD42B33B6F90043B5BF /* CoinRowView.swift in Sources */,
+				E9FDFFDA2B345ED50043B5BF /* HomeViewModel.swift in Sources */,
 				E9FDFFB62B3360F50043B5BF /* ContentView.swift in Sources */,
 				E9FDFFD62B344E8C0043B5BF /* PreviewContent.swift in Sources */,
 				E9FDFFC92B3368020043B5BF /* HomeView.swift in Sources */,
