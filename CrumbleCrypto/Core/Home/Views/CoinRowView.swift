@@ -27,8 +27,8 @@ struct CoinRowView: View {
 
 #Preview("Coin Row", traits: .sizeThatFitsLayout) {
     VStack {
-        CoinRowView(coin: PreviewContent.sample.coin, showHoldingsColumn: false)
-        CoinRowView(coin: PreviewContent.sample.coin, showHoldingsColumn: true)
+        CoinRowView(coin: Preview.sample.coin, showHoldingsColumn: false)
+        CoinRowView(coin: Preview.sample.coin, showHoldingsColumn: true)
     }
     .padding()
 }

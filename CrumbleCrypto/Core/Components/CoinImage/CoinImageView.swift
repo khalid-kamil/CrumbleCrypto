@@ -32,6 +32,6 @@ struct CoinImageView: View {
 }
 
 #Preview("Coin Image", traits: .sizeThatFitsLayout) {
-    CoinImageView(coin: PreviewContent.sample.coin)
+    CoinImageView(coin: Preview.sample.coin)
         .padding()
 }

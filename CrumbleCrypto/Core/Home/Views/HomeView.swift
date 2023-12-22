@@ -21,6 +21,7 @@ struct HomeView: View {
             // content layer
             VStack {
                 homeHeader
+                HomeStatisticsView(showPortfolio: $showPortfolio)
                 SearchBarView(searchText: $vm.searchText)
                 columnTitles
 
@@ -44,7 +45,7 @@ struct HomeView: View {
         HomeView()
             .navigationBarHidden(true)
     }
-    .environmentObject(PreviewContent.sample.homeVM)
+    .environmentObject(Preview.sample.homeVM)
 }
 
 extension HomeView {
