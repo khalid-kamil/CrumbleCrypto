@@ -181,7 +181,7 @@ struct MarketData: Codable {
     }
 
     var marketCap: String {
-        if let item = totalMarketCap.first(where: { $0.key == "usd "}) {
+        if let item = totalMarketCap.first(where: { $0.key == "usd"}) {
             return "$" + item.value.formattedWithAbbreviations()
         }
         return ""
