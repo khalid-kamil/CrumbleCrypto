@@ -32,21 +32,14 @@ struct PortfolioView: View {
                     XMarkButton()
                 }
                 ToolbarItem(placement: .topBarTrailing) {
-                    ZStack {
-                        Button(action: {
-                            saveButtonPressed()
-                        }, label: {
-                            Text("Save".uppercased())
-                        })
-                        .opacity((selectedCoin != nil && selectedCoin?.currentHoldings != Double(quantityText)) ? 1 : 0)
-
-                        Image(systemName: "checkmark")
-                            .opacity(showCheckmark ? 1 : 0)
-                    }
-                    .font(.headline)
-                    .foregroundStyle(Color.theme.accent)
+                    trailingTopBarButton
                 }
             })
+            .onChange(of: vm.searchText) {
+                if vm.searchText == "" {
+                    removeSelectedCoin()
+                }
+            }
         }
     }
 }
@@ -60,13 +53,13 @@ extension PortfolioView {
     private var coinBadgeList: some View {
         ScrollView(.horizontal, showsIndicators: false, content: {
             LazyHStack(spacing: 10, content: {
-                ForEach(vm.allCoins) { coin in
+                ForEach(vm.searchText.isEmpty ? vm.portfolioCoins : vm.allCoins) { coin in
                     CoinBadgeView(coin: coin)
                         .frame(width: 76)
                         .padding(4)
                         .onTapGesture {
                             withAnimation(.easeIn) {
-                                selectedCoin = coin
+                                updateSelectedCoin(coin: coin)
                             }
                         }
                         .background {
@@ -78,6 +71,16 @@ extension PortfolioView {
             .padding(.vertical, 4)
             .padding(.leading)
         })
+    }
+
+    private func updateSelectedCoin(coin: Coin) {
+        selectedCoin = coin
+
+        if let portfolioCoin = vm.portfolioCoins.first(where: { $0.id == coin.id }), let amount = portfolioCoin.currentHoldings {
+            quantityText = "\(amount)"
+        } else {
+            quantityText = ""
+        }
     }
 
     private var portfolioInputSection: some View {
@@ -93,7 +96,7 @@ extension PortfolioView {
                 Spacer()
                 TextField("E.g.: 1.4", text: $quantityText)
                     .multilineTextAlignment(.trailing)
-                    .keyboardType(.numberPad)
+                    .keyboardType(.decimalPad)
             }
             Divider()
             HStack {
@@ -107,6 +110,22 @@ extension PortfolioView {
         .font(.headline)
     }
 
+    private var trailingTopBarButton: some View {
+        ZStack {
+            Button(action: {
+                saveButtonPressed()
+            }, label: {
+                Text("Save".uppercased())
+            })
+            .opacity((selectedCoin != nil && selectedCoin?.currentHoldings != Double(quantityText)) ? 1 : 0)
+
+            Image(systemName: "checkmark")
+                .opacity(showCheckmark ? 1 : 0)
+        }
+        .font(.headline)
+        .foregroundStyle(Color.theme.accent)
+    }
+
     private func getCurrentValue() -> Double {
         if let quantity = Double(quantityText) {
             return quantity * (selectedCoin?.currentPrice ?? 0)
@@ -116,9 +135,10 @@ extension PortfolioView {
 
     private func saveButtonPressed() {
 
-        guard let coin = selectedCoin else { return }
+        guard let coin = selectedCoin, let amount = Double(quantityText) else { return }
 
         // save to portfolio
+        vm.updatePortfolio(coin: coin, amount: amount)
 
         // show checkmark
         withAnimation(.easeIn) {
