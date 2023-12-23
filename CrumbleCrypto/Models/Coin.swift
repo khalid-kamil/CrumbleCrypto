@@ -56,7 +56,7 @@ struct Coin: Identifiable, Codable {
     let currentPrice: Double
     let marketCap, marketCapRank, fullyDilutedValuation: Double?
     let totalVolume, high24H, low24H: Double?
-    let priceChange24H, priceChangePercentage24H: Double?
+    let priceChange24H, priceChangePercentage24H: Double
     let marketCapChange24H: Double?
     let marketCapChangePercentage24H: Double?
     let circulatingSupply, totalSupply, maxSupply, ath: Double?

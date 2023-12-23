@@ -93,6 +93,12 @@ extension HomeView {
             }
         }
         .listStyle(.plain)
+        .refreshable {
+            withAnimation(.linear(duration: 2.0)) {
+                print("Refreshing")
+                vm.reloadData()
+            }
+        }
     }
 
     private var portfolioCoinsList: some View {
